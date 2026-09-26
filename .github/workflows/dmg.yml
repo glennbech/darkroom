@@ -1,0 +1,94 @@
+name: Build DMG
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version string embedded in the DMG filename (e.g. 0.1.0)"
+        required: false
+        default: "dev"
+
+jobs:
+  build:
+    runs-on: macos-15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Resolve version
+        id: version
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            VERSION="${GITHUB_REF_NAME#v}"
+          else
+            VERSION="${{ inputs.version }}"
+          fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Build Darkroom.app (ad-hoc signed)
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project Darkroom.xcodeproj \
+            -scheme Darkroom \
+            -configuration Release \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build \
+            MARKETING_VERSION="${{ steps.version.outputs.version }}" \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Stage app for DMG
+        run: |
+          set -euo pipefail
+          APP_PATH="build/Build/Products/Release/Darkroom.app"
+          test -d "$APP_PATH" || { echo "App not found at $APP_PATH"; exit 1; }
+          rm -rf dmg-staging
+          mkdir dmg-staging
+          cp -R "$APP_PATH" dmg-staging/
+          ln -s /Applications dmg-staging/Applications
+
+      - name: Create DMG
+        id: dmg
+        run: |
+          set -euo pipefail
+          DMG_NAME="Darkroom-${{ steps.version.outputs.version }}.dmg"
+          hdiutil create \
+            -volname "Darkroom" \
+            -srcfolder dmg-staging \
+            -ov \
+            -format UDZO \
+            "${DMG_NAME}"
+          echo "dmg_path=${DMG_NAME}" >> "$GITHUB_OUTPUT"
+          echo "dmg_name=${DMG_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload DMG artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.dmg.outputs.dmg_name }}
+          path: ${{ steps.dmg.outputs.dmg_path }}
+          if-no-files-found: error
+
+      - name: Attach DMG to Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.dmg.outputs.dmg_path }}
+          fail_on_unmatched_files: true
