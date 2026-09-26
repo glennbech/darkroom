@@ -1,0 +1,62 @@
+name: Darkroom
+options:
+  bundleIdPrefix: no.glennbech
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "15.0"
+  developmentLanguage: en
+  xcodeVersion: "26.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    GENERATE_INFOPLIST_FILE: NO
+    SWIFT_STRICT_CONCURRENCY: minimal
+
+targets:
+  Darkroom:
+    type: application
+    platform: macOS
+    sources:
+      - path: Darkroom
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: no.glennbech.darkroom
+        INFOPLIST_FILE: Darkroom/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Darkroom/Resources/Darkroom.entitlements
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+        ENABLE_APP_SANDBOX: YES
+        COMBINE_HIDPI_IMAGES: YES
+
+  DarkroomTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: DarkroomTests
+    dependencies:
+      - target: Darkroom
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: no.glennbech.darkroom.tests
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Darkroom.app/Contents/MacOS/Darkroom"
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks"
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  Darkroom:
+    build:
+      targets:
+        Darkroom: all
+        DarkroomTests: [test]
+    test:
+      targets:
+        - DarkroomTests
+      gatherCoverageData: true

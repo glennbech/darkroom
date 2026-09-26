@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02A341D4AF7D123BB449525C /* MaskInvertToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D836EC2375635C185D4C6A /* MaskInvertToggle.swift */; };
+		070EF887D5A11B3569285D2E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8E6E4060279FE046E7AB5 /* Renderer.swift */; };
+		0C1232DE1AD36102272579D5 /* MaskKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACD96850F48A42CB9224D32 /* MaskKind.swift */; };
+		1218C90E887F54268A44869B /* MaskHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE4898D3D71182667B3B36 /* MaskHandle.swift */; };
+		18D028F988FCAF3718F8F8BB /* EditorStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CC5A6F8E6E3A56AC6B38D3 /* EditorStateTests.swift */; };
+		2320550CCC60A590C8D0B333 /* CropPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3089BCEC47A596D554EFF65 /* CropPanel.swift */; };
+		32EEB5F5570192D445402177 /* EditorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EDD5190E38725D08FFC2C4 /* EditorState.swift */; };
+		38BA7469C37E8D1F5588FCA8 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C756ED6ECDA66E8374ACE /* Operation.swift */; };
+		45B8152F70751FDE04F18175 /* AdjustmentSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B45E00B34878F41FEE5B29 /* AdjustmentSlider.swift */; };
+		4FDA0E40A9AB7BDB385833BD /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41614227C0B901DFC0057A /* HistoryEntry.swift */; };
+		595B04E27BE0101B5519FE4F /* AdjustmentSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82750EDC4D37181AE4889C07 /* AdjustmentSlidersView.swift */; };
+		681676D8D6C0A64FC49183C6 /* RightRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A599480BDB434F22D5214A /* RightRail.swift */; };
+		6A8B3AFE01F882B70B764367 /* AdjustmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E7D0C314AF4A66AF6E69E /* AdjustmentsTests.swift */; };
+		70DDF529DF13244191A62CC6 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1017AD92AF540A6BD82D14C /* HistogramView.swift */; };
+		774E3D342F513D34739803AD /* NormalizedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E391AC72CCD9D8375E1AF13 /* NormalizedRect.swift */; };
+		7F737BDFCB71C224D8925DB5 /* DarkroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26ED64EFACD915208ECD3D2 /* DarkroomApp.swift */; };
+		8064D70528EBAB605A88B02B /* ResizeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A267E3916F11FBB79DB27E /* ResizeSheet.swift */; };
+		8364ADCB3D39D9503BEEC0AA /* CanvasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255A17977D6DB9FAA1B24E50 /* CanvasModel.swift */; };
+		8E4566D6B8C47A06B0B88ED3 /* ImagePrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408BAA7C61EB85C408719CB /* ImagePrintView.swift */; };
+		92EB6E96D7137C8CDB2DBDAD /* StarDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341F5122C706BCEC937D9D0 /* StarDocument.swift */; };
+		96C8029413D288A3663E5EB5 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E7054CAA8B89B625956A1 /* HistoryManager.swift */; };
+		9DA0664FBC3429F65B55C36B /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97394E2FEC927D17950DA42 /* Mask.swift */; };
+		9F5C77E91FCF569947A994F3 /* AdjustmentsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4EF2383D3F73264BEDFC9 /* AdjustmentsPanel.swift */; };
+		A3B241AEBC1809FFBC91819F /* Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F44E812F7693439E93F59 /* Adjustments.swift */; };
+		A4E13F16F248CD0D6FB19D3D /* HistoryPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA5ABC919604033CBBF93A /* HistoryPanel.swift */; };
+		A70FCC319077C61C7534EFF0 /* CollapsibleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B98A96B056F00EB6BDA8C4 /* CollapsibleSection.swift */; };
+		B16D72C2D1E65AF3603A135C /* Histogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D178DD635A1CBDD8F71C6447 /* Histogram.swift */; };
+		B3200F80BF5370D69803C207 /* MaskAmountSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CCBBD7A10EB1438ADA2603 /* MaskAmountSlider.swift */; };
+		B437E1DB1741A7AC09981185 /* MaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272B3889A3774CD0F28F252B /* MaskTests.swift */; };
+		B60DD8AD5EE2572523BA1E09 /* CropHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7627BE11EA3FB9A99834F41 /* CropHandle.swift */; };
+		BB4F852B58F642AE0F56551D /* OperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F9C00D9221E2B5812FA552 /* OperationTests.swift */; };
+		BD2BDB818BAE66C4637CEEAC /* AdjustmentTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C20215206BDE6BF08B0DFE /* AdjustmentTarget.swift */; };
+		BF18158E8722616078AF1EFD /* MasksPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE346F5BB40057433C84032F /* MasksPanel.swift */; };
+		DB35CA58D2DD6306405E892F /* HistoryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D7BF0AB660DD0CDA5896F /* HistoryManagerTests.swift */; };
+		E681CDC394FF45B4A475EF38 /* Rulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6A1265825029B8E6F3D85C /* Rulers.swift */; };
+		E7901CE522B37B09C0D91CB0 /* MaskCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52C3C1ADF0CD8DFD77B8CD /* MaskCompositor.swift */; };
+		E989B2934033931D4C2B0C55 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD9083BB18FE9F7A61EEB /* CanvasView.swift */; };
+		EBD094E783EE3E25A850F2F2 /* DockPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCD00B4427BA2E83D7E5DD /* DockPanel.swift */; };
+		ED9AAE33FA91ABB8A4F7DE21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13732249192C6D77B600E57E /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36C38AFFF883BEEC33B2C58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 452BD6336CBFDB0B4023A8AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47D7459C598B7E62F9AD4CB1;
+			remoteInfo = Darkroom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06EDD5190E38725D08FFC2C4 /* EditorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorState.swift; sourceTree = "<group>"; };
+		13732249192C6D77B600E57E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1F8E7054CAA8B89B625956A1 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
+		23D836EC2375635C185D4C6A /* MaskInvertToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskInvertToggle.swift; sourceTree = "<group>"; };
+		255A17977D6DB9FAA1B24E50 /* CanvasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModel.swift; sourceTree = "<group>"; };
+		272B3889A3774CD0F28F252B /* MaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTests.swift; sourceTree = "<group>"; };
+		38A599480BDB434F22D5214A /* RightRail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightRail.swift; sourceTree = "<group>"; };
+		3D31A3074B50E6A290C96CD9 /* Darkroom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Darkroom.entitlements; sourceTree = "<group>"; };
+		405DEB0C3D535E2AD0555746 /* Darkroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Darkroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341F5122C706BCEC937D9D0 /* StarDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDocument.swift; sourceTree = "<group>"; };
+		4F52C3C1ADF0CD8DFD77B8CD /* MaskCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskCompositor.swift; sourceTree = "<group>"; };
+		560680DEB6E22276A057C54C /* DarkroomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarkroomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F9C00D9221E2B5812FA552 /* OperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTests.swift; sourceTree = "<group>"; };
+		65A267E3916F11FBB79DB27E /* ResizeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeSheet.swift; sourceTree = "<group>"; };
+		73C20215206BDE6BF08B0DFE /* AdjustmentTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentTarget.swift; sourceTree = "<group>"; };
+		7D41614227C0B901DFC0057A /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
+		7E391AC72CCD9D8375E1AF13 /* NormalizedRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizedRect.swift; sourceTree = "<group>"; };
+		82750EDC4D37181AE4889C07 /* AdjustmentSlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentSlidersView.swift; sourceTree = "<group>"; };
+		8FC4EF2383D3F73264BEDFC9 /* AdjustmentsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentsPanel.swift; sourceTree = "<group>"; };
+		9408BAA7C61EB85C408719CB /* ImagePrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrintView.swift; sourceTree = "<group>"; };
+		94EE4898D3D71182667B3B36 /* MaskHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskHandle.swift; sourceTree = "<group>"; };
+		A23E7D0C314AF4A66AF6E69E /* AdjustmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentsTests.swift; sourceTree = "<group>"; };
+		A26ED64EFACD915208ECD3D2 /* DarkroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkroomApp.swift; sourceTree = "<group>"; };
+		A5A8E6E4060279FE046E7AB5 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		AC2AD9083BB18FE9F7A61EEB /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		B8CCBBD7A10EB1438ADA2603 /* MaskAmountSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskAmountSlider.swift; sourceTree = "<group>"; };
+		C4D9A0AEC61C3C54759C81E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CACD96850F48A42CB9224D32 /* MaskKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskKind.swift; sourceTree = "<group>"; };
+		D178DD635A1CBDD8F71C6447 /* Histogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Histogram.swift; sourceTree = "<group>"; };
+		D3B98A96B056F00EB6BDA8C4 /* CollapsibleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleSection.swift; sourceTree = "<group>"; };
+		D41C756ED6ECDA66E8374ACE /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		D53F44E812F7693439E93F59 /* Adjustments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustments.swift; sourceTree = "<group>"; };
+		D97D7BF0AB660DD0CDA5896F /* HistoryManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagerTests.swift; sourceTree = "<group>"; };
+		DC6A1265825029B8E6F3D85C /* Rulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rulers.swift; sourceTree = "<group>"; };
+		E3089BCEC47A596D554EFF65 /* CropPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPanel.swift; sourceTree = "<group>"; };
+		E97394E2FEC927D17950DA42 /* Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		E9B45E00B34878F41FEE5B29 /* AdjustmentSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentSlider.swift; sourceTree = "<group>"; };
+		F1017AD92AF540A6BD82D14C /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
+		F5CC5A6F8E6E3A56AC6B38D3 /* EditorStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorStateTests.swift; sourceTree = "<group>"; };
+		F7627BE11EA3FB9A99834F41 /* CropHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropHandle.swift; sourceTree = "<group>"; };
+		FABA5ABC919604033CBBF93A /* HistoryPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPanel.swift; sourceTree = "<group>"; };
+		FDDCD00B4427BA2E83D7E5DD /* DockPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPanel.swift; sourceTree = "<group>"; };
+		FE346F5BB40057433C84032F /* MasksPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasksPanel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		339891A09E310043FF73C89B /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD9083BB18FE9F7A61EEB /* CanvasView.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		69C68AC0080BFBAEF45A00AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				405DEB0C3D535E2AD0555746 /* Darkroom.app */,
+				560680DEB6E22276A057C54C /* DarkroomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AE11E3B1DE1B6D992591FC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D53F44E812F7693439E93F59 /* Adjustments.swift */,
+				255A17977D6DB9FAA1B24E50 /* CanvasModel.swift */,
+				F7627BE11EA3FB9A99834F41 /* CropHandle.swift */,
+				06EDD5190E38725D08FFC2C4 /* EditorState.swift */,
+				7D41614227C0B901DFC0057A /* HistoryEntry.swift */,
+				1F8E7054CAA8B89B625956A1 /* HistoryManager.swift */,
+				E97394E2FEC927D17950DA42 /* Mask.swift */,
+				94EE4898D3D71182667B3B36 /* MaskHandle.swift */,
+				CACD96850F48A42CB9224D32 /* MaskKind.swift */,
+				7E391AC72CCD9D8375E1AF13 /* NormalizedRect.swift */,
+				D41C756ED6ECDA66E8374ACE /* Operation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7527D01D01A0A18441D2DB27 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E9B45E00B34878F41FEE5B29 /* AdjustmentSlider.swift */,
+				82750EDC4D37181AE4889C07 /* AdjustmentSlidersView.swift */,
+				8FC4EF2383D3F73264BEDFC9 /* AdjustmentsPanel.swift */,
+				73C20215206BDE6BF08B0DFE /* AdjustmentTarget.swift */,
+				D3B98A96B056F00EB6BDA8C4 /* CollapsibleSection.swift */,
+				13732249192C6D77B600E57E /* ContentView.swift */,
+				E3089BCEC47A596D554EFF65 /* CropPanel.swift */,
+				FDDCD00B4427BA2E83D7E5DD /* DockPanel.swift */,
+				F1017AD92AF540A6BD82D14C /* HistogramView.swift */,
+				FABA5ABC919604033CBBF93A /* HistoryPanel.swift */,
+				B8CCBBD7A10EB1438ADA2603 /* MaskAmountSlider.swift */,
+				23D836EC2375635C185D4C6A /* MaskInvertToggle.swift */,
+				FE346F5BB40057433C84032F /* MasksPanel.swift */,
+				65A267E3916F11FBB79DB27E /* ResizeSheet.swift */,
+				38A599480BDB434F22D5214A /* RightRail.swift */,
+				DC6A1265825029B8E6F3D85C /* Rulers.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7688326F32C6038DD4F748CE = {
+			isa = PBXGroup;
+			children = (
+				C4219ADB2A8DED80B6AEB7B6 /* Darkroom */,
+				A474CA3BF743B6F6CBA11BB7 /* DarkroomTests */,
+				69C68AC0080BFBAEF45A00AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A474CA3BF743B6F6CBA11BB7 /* DarkroomTests */ = {
+			isa = PBXGroup;
+			children = (
+				A23E7D0C314AF4A66AF6E69E /* AdjustmentsTests.swift */,
+				F5CC5A6F8E6E3A56AC6B38D3 /* EditorStateTests.swift */,
+				D97D7BF0AB660DD0CDA5896F /* HistoryManagerTests.swift */,
+				272B3889A3774CD0F28F252B /* MaskTests.swift */,
+				63F9C00D9221E2B5812FA552 /* OperationTests.swift */,
+			);
+			path = DarkroomTests;
+			sourceTree = "<group>";
+		};
+		BE142D05BD0B5E703DD30C52 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				9408BAA7C61EB85C408719CB /* ImagePrintView.swift */,
+				4341F5122C706BCEC937D9D0 /* StarDocument.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		C4219ADB2A8DED80B6AEB7B6 /* Darkroom */ = {
+			isa = PBXGroup;
+			children = (
+				D0BF106FFA84AEABD97780F6 /* App */,
+				339891A09E310043FF73C89B /* Canvas */,
+				BE142D05BD0B5E703DD30C52 /* Document */,
+				6AE11E3B1DE1B6D992591FC1 /* Model */,
+				F84A31D8DA85E31BC9A1EB7C /* Rendering */,
+				FB079EA240519A0A235544A2 /* Resources */,
+				7527D01D01A0A18441D2DB27 /* UI */,
+			);
+			path = Darkroom;
+			sourceTree = "<group>";
+		};
+		D0BF106FFA84AEABD97780F6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A26ED64EFACD915208ECD3D2 /* DarkroomApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F84A31D8DA85E31BC9A1EB7C /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				D178DD635A1CBDD8F71C6447 /* Histogram.swift */,
+				4F52C3C1ADF0CD8DFD77B8CD /* MaskCompositor.swift */,
+				A5A8E6E4060279FE046E7AB5 /* Renderer.swift */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		FB079EA240519A0A235544A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D31A3074B50E6A290C96CD9 /* Darkroom.entitlements */,
+				C4D9A0AEC61C3C54759C81E8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47D7459C598B7E62F9AD4CB1 /* Darkroom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60098AA41C184FFE42FE960 /* Build configuration list for PBXNativeTarget "Darkroom" */;
+			buildPhases = (
+				507160B9ECFA4A329197D7C1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Darkroom;
+			packageProductDependencies = (
+			);
+			productName = Darkroom;
+			productReference = 405DEB0C3D535E2AD0555746 /* Darkroom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		898B8AA6FB9F7482F060DBBE /* DarkroomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EDD00E18DFD9E5CD5E101A9 /* Build configuration list for PBXNativeTarget "DarkroomTests" */;
+			buildPhases = (
+				D5816B3B2D35AABAA4899736 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767D34D12276B34086EB0BE8 /* PBXTargetDependency */,
+			);
+			name = DarkroomTests;
+			packageProductDependencies = (
+			);
+			productName = DarkroomTests;
+			productReference = 560680DEB6E22276A057C54C /* DarkroomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		452BD6336CBFDB0B4023A8AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					47D7459C598B7E62F9AD4CB1 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					898B8AA6FB9F7482F060DBBE = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EED809B70D6138CF546BCC18 /* Build configuration list for PBXProject "Darkroom" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7688326F32C6038DD4F748CE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 69C68AC0080BFBAEF45A00AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47D7459C598B7E62F9AD4CB1 /* Darkroom */,
+				898B8AA6FB9F7482F060DBBE /* DarkroomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		507160B9ECFA4A329197D7C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45B8152F70751FDE04F18175 /* AdjustmentSlider.swift in Sources */,
+				595B04E27BE0101B5519FE4F /* AdjustmentSlidersView.swift in Sources */,
+				BD2BDB818BAE66C4637CEEAC /* AdjustmentTarget.swift in Sources */,
+				A3B241AEBC1809FFBC91819F /* Adjustments.swift in Sources */,
+				9F5C77E91FCF569947A994F3 /* AdjustmentsPanel.swift in Sources */,
+				8364ADCB3D39D9503BEEC0AA /* CanvasModel.swift in Sources */,
+				E989B2934033931D4C2B0C55 /* CanvasView.swift in Sources */,
+				A70FCC319077C61C7534EFF0 /* CollapsibleSection.swift in Sources */,
+				ED9AAE33FA91ABB8A4F7DE21 /* ContentView.swift in Sources */,
+				B60DD8AD5EE2572523BA1E09 /* CropHandle.swift in Sources */,
+				2320550CCC60A590C8D0B333 /* CropPanel.swift in Sources */,
+				7F737BDFCB71C224D8925DB5 /* DarkroomApp.swift in Sources */,
+				EBD094E783EE3E25A850F2F2 /* DockPanel.swift in Sources */,
+				32EEB5F5570192D445402177 /* EditorState.swift in Sources */,
+				B16D72C2D1E65AF3603A135C /* Histogram.swift in Sources */,
+				70DDF529DF13244191A62CC6 /* HistogramView.swift in Sources */,
+				4FDA0E40A9AB7BDB385833BD /* HistoryEntry.swift in Sources */,
+				96C8029413D288A3663E5EB5 /* HistoryManager.swift in Sources */,
+				A4E13F16F248CD0D6FB19D3D /* HistoryPanel.swift in Sources */,
+				8E4566D6B8C47A06B0B88ED3 /* ImagePrintView.swift in Sources */,
+				9DA0664FBC3429F65B55C36B /* Mask.swift in Sources */,
+				B3200F80BF5370D69803C207 /* MaskAmountSlider.swift in Sources */,
+				E7901CE522B37B09C0D91CB0 /* MaskCompositor.swift in Sources */,
+				1218C90E887F54268A44869B /* MaskHandle.swift in Sources */,
+				02A341D4AF7D123BB449525C /* MaskInvertToggle.swift in Sources */,
+				0C1232DE1AD36102272579D5 /* MaskKind.swift in Sources */,
+				BF18158E8722616078AF1EFD /* MasksPanel.swift in Sources */,
+				774E3D342F513D34739803AD /* NormalizedRect.swift in Sources */,
+				38BA7469C37E8D1F5588FCA8 /* Operation.swift in Sources */,
+				070EF887D5A11B3569285D2E /* Renderer.swift in Sources */,
+				8064D70528EBAB605A88B02B /* ResizeSheet.swift in Sources */,
+				681676D8D6C0A64FC49183C6 /* RightRail.swift in Sources */,
+				E681CDC394FF45B4A475EF38 /* Rulers.swift in Sources */,
+				92EB6E96D7137C8CDB2DBDAD /* StarDocument.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5816B3B2D35AABAA4899736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A8B3AFE01F882B70B764367 /* AdjustmentsTests.swift in Sources */,
+				18D028F988FCAF3718F8F8BB /* EditorStateTests.swift in Sources */,
+				DB35CA58D2DD6306405E892F /* HistoryManagerTests.swift in Sources */,
+				B437E1DB1741A7AC09981185 /* MaskTests.swift in Sources */,
+				BB4F852B58F642AE0F56551D /* OperationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		767D34D12276B34086EB0BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47D7459C598B7E62F9AD4CB1 /* Darkroom */;
+			targetProxy = 36C38AFFF883BEEC33B2C58A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09EB32092FBCB00B039AA9C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Darkroom/Resources/Darkroom.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				INFOPLIST_FILE = Darkroom/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.glennbech.darkroom;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		27A4424BF5855DF34A440B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.glennbech.darkroom.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Darkroom.app/Contents/MacOS/Darkroom";
+			};
+			name = Release;
+		};
+		2BD9BE79D45F8DF9EEA2D5CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		418D79ADDE42A706AF8931FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.glennbech.darkroom.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Darkroom.app/Contents/MacOS/Darkroom";
+			};
+			name = Debug;
+		};
+		63DBFA174677C5FA2B4DC621 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FF49A79357245D17CD8D936F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Darkroom/Resources/Darkroom.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				INFOPLIST_FILE = Darkroom/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.glennbech.darkroom;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EDD00E18DFD9E5CD5E101A9 /* Build configuration list for PBXNativeTarget "DarkroomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418D79ADDE42A706AF8931FD /* Debug */,
+				27A4424BF5855DF34A440B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EED809B70D6138CF546BCC18 /* Build configuration list for PBXProject "Darkroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63DBFA174677C5FA2B4DC621 /* Debug */,
+				2BD9BE79D45F8DF9EEA2D5CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F60098AA41C184FFE42FE960 /* Build configuration list for PBXNativeTarget "Darkroom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09EB32092FBCB00B039AA9C8 /* Debug */,
+				FF49A79357245D17CD8D936F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 452BD6336CBFDB0B4023A8AD /* Project object */;
+}
